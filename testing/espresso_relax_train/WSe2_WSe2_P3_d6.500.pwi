@@ -1,0 +1,49 @@
+&CONTROL
+   calculation      = 'relax'
+   restart_mode     = 'from_scratch'
+   tstress          = .true.
+   tprnfor          = .true.
+   prefix           = 'WSe2_WSe2_P3_d6.500'
+   disk_io          = 'low'
+   pseudo_dir       = '/home/p/phrrpq/GBRV_PBE/'
+/
+&SYSTEM
+   ecutwfc          = 50
+   ecutrho          = 450.0
+   input_dft        = 'VDW-DF-OBK8'
+   ntyp             = 2
+   nat              = 6
+   ibrav            = 0
+/
+&ELECTRONS
+   conv_thr         = 1e-07
+   mixing_beta      = 0.3
+   diago_david_ndim = 8
+   startingpot      = 'file'
+   startingwfc      = 'atomic'
+/
+&IONS
+/
+&CELL
+/
+
+ATOMIC_SPECIES
+W 183.84 w_pbe_v1.2.uspp.F.UPF
+Se 78.971 se_pbe_v1.uspp.F.UPF
+
+K_POINTS automatic
+12 12 1  0 0 0
+
+CELL_PARAMETERS angstrom
+1.66143715200000 2.87769356084654 0.00000000000000
+-3.32287430400000 0.00000000000000 0.00000000000000
+0.00000000000000 0.00000000000000 19.36717881100000
+
+ATOMIC_POSITIONS angstrom
+W 0.0000000000 0.0000000000 9.6835894055 0 0 1
+Se 0.0000000000 1.9184623739 11.3671788110 0 0 1
+Se 0.0000000000 1.9184623739 8.0000000000 0 0 1
+W 0.0000000000 -1.9184623739 16.1835894055 0 0 1
+Se 0.0000000000 -0.0000000000 17.8671788110 0 0 1
+Se 0.0000000000 -0.0000000000 14.5000000000 0 0 1
+
