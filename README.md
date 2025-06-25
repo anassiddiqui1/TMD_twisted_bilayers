@@ -16,7 +16,7 @@ This folder contains the training, validation and test sets, the slurm script to
 
 ### `testing/`
 This directory contains scripts and notebooks for testing various aspects of the models and simulations, including adhesive tests, `espresso` (likely Quantum ESPRESSO) related tests for relaxation and strain, and parameter tests.
-
+- **`primitive`**: (directory) Contains DFT relaxation for the primitive cell of monolayers.
 - **`adhesive_test.ipynb`**: Jupyter Notebook for comparing DFT vs MLIP adhesive energy densities.
   This has been done on training (energy_vs_d_dft_mace_train.png) as well as test (energy_vs_d_dft_mace_test.png) configurations and produces Figures S2, S3 and Tables I, S2, S4.
 - **`aligned_test`**: (directory) Contains DFT scf calculations for aligned bilayers in the training dataset.
