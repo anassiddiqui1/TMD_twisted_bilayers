@@ -1,0 +1,49 @@
+&CONTROL
+   calculation      = 'relax'
+   restart_mode     = 'from_scratch'
+   tstress          = .true.
+   tprnfor          = .true.
+   prefix           = 'MoSe2_WSe2_P4_alat3'
+   disk_io          = 'low'
+   pseudo_dir       = '/home/theory/phrrpq/GBRV_PBE/'
+/
+&SYSTEM
+   ibrav            = 0
+   ecutwfc          = 50
+   ecutrho          = 450.0
+   input_dft        = 'VDW-DF-OBK8'
+   ntyp             = 3
+   nat              = 6
+/
+&ELECTRONS
+   conv_thr         = 1e-09
+   mixing_beta      = 0.5
+   startingpot      = 'file'
+   startingwfc      = 'atomic'
+/
+&IONS
+/
+&CELL
+/
+
+ATOMIC_SPECIES
+Mo 95.95 mo_pbe_v1.uspp.F.UPF
+Se 78.971 se_pbe_v1.uspp.F.UPF
+W 183.84 w_pbe_v1.2.uspp.F.UPF
+
+K_POINTS automatic
+12 12 1  0 0 0
+
+CELL_PARAMETERS angstrom
+1.66130344300000 2.87746197006511 0.00000000000000
+-3.32260688600000 0.00000000000000 0.00000000000000
+0.00000000000000 0.00000000000000 19.34925590720000
+
+ATOMIC_POSITIONS angstrom
+Mo 0.0000000000 0.0000000000 9.4461741170 
+Se 0.0000000000 1.9183079800 11.1221321473 
+Se 0.0000000000 1.9183079800 7.7715112432 
+W 0.0000000000 2.8774619701 16.1620413611 
+Se 0.0000000000 4.7957699501 17.8459369076 
+Se 0.0000000000 4.7957699501 14.4768563012 
+

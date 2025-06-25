@@ -1,0 +1,965 @@
+OMP_THREADS: 12
+MPI: 1
+NTASKS-PER-NODE: 4
+CPUS_PER_TASK: 12
+LAMMPS (28 Mar 2023 - Development)
+  using 12 OpenMP thread(s) per MPI task
+  using 12 OpenMP thread(s) per MPI task
+Reading restart file ...
+  restart file = 28 Mar 2023, LAMMPS = 28 Mar 2023
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (175.53304 152.01607 30) with tilt (-87.766521 0 0)
+WARNING: Triclinic box skew is large. LAMMPS will run inefficiently. (src/domain.cpp:220)
+  2 by 2 by 1 MPI processor grid
+  restoring pair style mace from restart
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:746)
+  16746 atoms
+  read_restart CPU = 0.072 seconds
+CUDA unavailable, setting device type to torch::kCPU.
+CUDA unavailable, setting device type to torch::kCPU.
+CUDA unavailable, setting device type to torch::kCPU.
+CUDA unavailable, setting device type to torch::kCPU.
+Loading MACE model from "/home/theory/phrrpq/bilayer_relaxations/MoWSSe_bi_radius_8_reduced_all_1_swa_800_run-123_swa.model-lammps.pt" ... finished.
+Loading MACE model from "/home/theory/phrrpq/bilayer_relaxations/MoWSSe_bi_radius_8_reduced_all_1_swa_800_run-123_swa.model-lammps.pt" ... finished.
+Loading MACE model from "/home/theory/phrrpq/bilayer_relaxations/MoWSSe_bi_radius_8_reduced_all_1_swa_800_run-123_swa.model-lammps.pt" ... finished.
+Loading MACE model from "/home/theory/phrrpq/bilayer_relaxations/MoWSSe_bi_radius_8_reduced_all_1_swa_800_run-123_swa.model-lammps.pt" ... finished.
+  - The torch_float_dtype is: Double
+  - The torch_float_dtype is: Double
+  - The r_max is: 8.
+  - The r_max is: 8.
+  - The model has: 2 layers.
+  - The model has: 2 layers.
+  - The torch_float_dtype is: Double
+  - The torch_float_dtype is: Double
+  - The r_max is: 8.
+  - The model has: 2 layers.
+  - The r_max is: 8.
+  - The model has: 2 layers.
+  - The model atomic numbers are: 16 34 42 74.
+  - The pair_coeff atomic numbers are: 42 34 74.
+  - The model atomic numbers are: 16 34 42 74.
+  - The pair_coeff atomic numbers are: 42 34 74.
+  - The model atomic numbers are: 16 34 42 74.
+  - The pair_coeff atomic numbers are: 42 34 74.
+  - The model atomic numbers are: 16 34 42 74.
+  - The pair_coeff atomic numbers are: 42 34 74.
+Generated 0 of 3 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 18
+  ghost atom cutoff = 18
+  binsize = 9, bins = 30 17 4
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair mace, perpetual
+      attributes: full, newton on, ghost
+      pair build: full/bin/ghost
+      stencil: full/ghost/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 378
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 59.34 | 59.34 | 59.34 Mbytes
+   Step          Time           Temp           CPU           TotEng          Fmax          Fnorm     
+       378                   0.0378                       0                       0      -18029768.05003493    0.001455621832567114     0.03932135865737602
+Loop time of 2.66975e-06 on 48 procs for 0 steps with 16746 atoms
+
+103.0% CPU use with 4 MPI tasks x 12 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 2.67e-06   |            |       |100.00
+
+Nlocal:         4186.5 ave        4230 max        4142 min
+Histogram: 2 0 0 0 0 0 0 0 0 2
+Nghost:        15485.8 ave       15523 max       15452 min
+Histogram: 2 0 0 0 0 0 0 0 0 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+FullNghs:  2.48818e+06 ave 2.51403e+06 max 2.46173e+06 min
+Histogram: 2 0 0 0 0 0 0 0 0 2
+
+Total # of neighbors = 9952706
+Ave neighs/atom = 594.33333
+Neighbor list builds = 0
+Dangerous builds = 0
+BEGIN LAMMPS STANDALONE MINIMIZATION; ii = 30; OMP = 12; MPI = 4
+minimize 0.0 1e-3 1000 100000
+Generated 0 of 3 mixed pair_coeff terms from geometric mixing rule
+Generated 0 of 3 mixed pair_coeff terms from geometric mixing rule
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 378
+Per MPI rank memory allocation (min/avg/max) = 61.59 | 61.59 | 61.59 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 61.59 | 61.59 | 61.59 Mbytes
+   Step          Time           Temp           CPU           TotEng          Fmax          Fnorm     
+   Step          Time           Temp           CPU           TotEng          Fmax          Fnorm     
+       378                   0.0378                       0                       0      -18029768.05003493    0.001455621832628535     0.03932135865742268
+       378                   0.0378                       0                       0      -18029768.05003493    0.001455621832628535     0.03932135865742268
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       379                   0.0379                       0           453.035502142      -18029768.05006402   0.0004478374340783913     0.01838412151977739
+       379                   0.0379                       0           453.035502142      -18029768.05006402   0.0004478374340783913     0.01838412151977739
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       380                    0.038                       0           906.651337366      -18029768.05008132   0.0004819763695657099     0.02088863231812149
+       380                    0.038                       0           906.651337366      -18029768.05008132   0.0004819763695657099     0.02088863231812149
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       381                   0.0381                       0          1359.927856222      -18029768.05010403   0.0006711100031133663     0.02094999750592404
+       381                   0.0381                       0          1359.927856222      -18029768.05010403   0.0006711100031133663     0.02094999750592404
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       382                   0.0382                       0          1813.416905407      -18029768.05013178   0.0009266192426032153     0.02913345051054231
+       382                   0.0382                       0          1813.416905407      -18029768.05013178   0.0009266192426032153     0.02913345051054231
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       383                   0.0383                       0          2264.245249006      -18029768.05017439   0.0006341029081200632     0.02634628137568793
+       383                   0.0383                       0          2264.245249006      -18029768.05017439   0.0006341029081200632     0.02634628137568793
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       384                   0.0384                       0          2718.404017969      -18029768.05020899   0.0009383982652185511     0.02942696293644339
+       384                   0.0384                       0          2718.404017969      -18029768.05020899   0.0009383982652185511     0.02942696293644339
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       385                   0.0385                       0          3172.072978186       -18029768.0502621    0.001234842652146387     0.03493062783262176
+       385                   0.0385                       0          3172.072978186       -18029768.0502621    0.001234842652146387     0.03493062783262176
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       386                   0.0386                       0          3625.542910958      -18029768.05034456    0.001246004274061127      0.0403392851286331
+       386                   0.0386                       0          3625.542910958      -18029768.05034456    0.001246004274061127      0.0403392851286331
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       387                   0.0387                       0          4079.390658132      -18029768.05040351   0.0006339191320123005     0.02762417993798211
+       387                   0.0387                       0          4079.390658132      -18029768.05040351   0.0006339191320123005     0.02762417993798211
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       388                   0.0388                       0       4532.205294324001       -18029768.0504411   0.0008472894832504629     0.02831600268227775
+       388                   0.0388                       0       4532.205294324001       -18029768.0504411   0.0008472894832504629     0.02831600268227775
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       389                   0.0389                       0          4986.748898121      -18029768.05047309   0.0006355851457915803     0.02435021868621494
+       389                   0.0389                       0          4986.748898121      -18029768.05047309   0.0006355851457915803     0.02435021868621494
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       390                    0.039                       0          5439.739401318      -18029768.05050866    0.000967333768126289     0.02990940189768612
+       390                    0.039                       0          5439.739401318      -18029768.05050866    0.000967333768126289     0.02990940189768612
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       391                   0.0391                       0          5892.067502099       -18029768.0505421   0.0004851758252883004     0.01853479820289915
+       391                   0.0391                       0          5892.067502099       -18029768.0505421   0.0004851758252883004     0.01853479820289915
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       392                   0.0392                       0           6344.84101187       -18029768.0505571   0.0005325553000993873     0.02012598359359739
+       392                   0.0392                       0           6344.84101187       -18029768.0505571   0.0005325553000993873     0.02012598359359739
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       393                   0.0393                       0          6796.154733829      -18029768.05058322   0.0005274616840616324     0.02062458514696465
+       393                   0.0393                       0          6796.154733829      -18029768.05058322   0.0005274616840616324     0.02062458514696465
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       394                   0.0394                       0          7247.726207456      -18029768.05060406   0.0005786194508503471     0.02286350507579314
+       394                   0.0394                       0          7247.726207456      -18029768.05060406   0.0005786194508503471     0.02286350507579314
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       395                   0.0395                       0          7701.334136204      -18029768.05063163    0.000547143808462127     0.01960702378780942
+       395                   0.0395                       0          7701.334136204      -18029768.05063163    0.000547143808462127     0.01960702378780942
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       396                   0.0396                       0       8155.298275667999      -18029768.05064781   0.0006888790852670268     0.02086811119807848
+       396                   0.0396                       0       8155.298275667999      -18029768.05064781   0.0006888790852670268     0.02086811119807848
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       397                   0.0397                       0          8610.556160286      -18029768.05067593   0.0006716456609644908     0.02460956094991275
+       397                   0.0397                       0          8610.556160286      -18029768.05067593   0.0006716456609644908     0.02460956094991275
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       398                   0.0398                       0       9064.616925460001        -18029768.050704    0.000581596061705934     0.02379262310820949
+       398                   0.0398                       0       9064.616925460001        -18029768.050704    0.000581596061705934     0.02379262310820949
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       399                   0.0399                       0       9518.494936802001      -18029768.05072702   0.0004418011023586152     0.01753368514674896
+       399                   0.0399                       0       9518.494936802001      -18029768.05072702   0.0004418011023586152     0.01753368514674896
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       400                     0.04                       0          9972.385934468      -18029768.05074183   0.0005992260117075344     0.01898479761985563
+       400                     0.04                       0          9972.385934468      -18029768.05074183   0.0005992260117075344     0.01898479761985563
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       401                   0.0401                       0         10424.903899719      -18029768.05076241   0.0005423553378623895     0.01956379428516415
+       401                   0.0401                       0         10424.903899719      -18029768.05076241   0.0005423553378623895     0.01956379428516415
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       402                   0.0402                       0         10878.641908943      -18029768.05078432    0.000687393120309473     0.02382955308635755
+       402                   0.0402                       0         10878.641908943      -18029768.05078432    0.000687393120309473     0.02382955308635755
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       403                   0.0403                       0         11330.186218062      -18029768.05080958    0.000466664846069352     0.01692017252744363
+       403                   0.0403                       0         11330.186218062      -18029768.05080958    0.000466664846069352     0.01692017252744363
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       404                   0.0404                       0         11783.735752855      -18029768.05082077    0.000505854191085314     0.01779562589055969
+       404                   0.0404                       0         11783.735752855      -18029768.05082077    0.000505854191085314     0.01779562589055969
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       405                   0.0405                       0         12236.739062162      -18029768.05084232   0.0005371852733414388       0.018442469376837
+       405                   0.0405                       0         12236.739062162      -18029768.05084232   0.0005371852733414388       0.018442469376837
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       406                   0.0406                       0         12690.633727764      -18029768.05085501   0.0004613315047476791     0.01645771476809358
+       406                   0.0406                       0         12690.633727764      -18029768.05085501   0.0004613315047476791     0.01645771476809358
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       407                   0.0407                       0         13144.935995299      -18029768.05086914   0.0003676299904669858     0.01326121693468329
+       407                   0.0407                       0         13144.935995299      -18029768.05086914   0.0003676299904669858     0.01326121693468329
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       408                   0.0408                       0         13598.187936215      -18029768.05087585   0.0003752775675375832     0.01269427985531561
+       408                   0.0408                       0         13598.187936215      -18029768.05087585   0.0003752775675375832     0.01269427985531561
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       409                   0.0409                       0          14050.58255473       -18029768.0508878   0.0004032136343838002     0.01522932729379129
+       409                   0.0409                       0          14050.58255473       -18029768.0508878   0.0004032136343838002     0.01522932729379129
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       410                    0.041                       0          14503.94718338      -18029768.05089711   0.0003583593915529861     0.01324952158263154
+       410                    0.041                       0          14503.94718338      -18029768.05089711   0.0003583593915529861     0.01324952158263154
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       411                   0.0411                       0         14958.542858624       -18029768.0509046    0.000302971786803885     0.01099009609123692
+       411                   0.0411                       0         14958.542858624       -18029768.0509046    0.000302971786803885     0.01099009609123692
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       412                   0.0412                       0         15410.370575083       -18029768.0509094   0.0002764212015796525     0.01047584714073662
+       412                   0.0412                       0         15410.370575083       -18029768.0509094   0.0002764212015796525     0.01047584714073662
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       413                   0.0413                       0         15863.633012978      -18029768.05091584   0.0002924467418877409     0.01100069034863534
+       413                   0.0413                       0         15863.633012978      -18029768.05091584   0.0002924467418877409     0.01100069034863534
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       414                   0.0414                       0         16318.247484629      -18029768.05092138   0.0002802927166886964     0.01063038407808923
+       414                   0.0414                       0         16318.247484629      -18029768.05092138   0.0002802927166886964     0.01063038407808923
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       415                   0.0415                       0         16771.412827685      -18029768.05092728   0.0002400796066738126    0.009520407065675305
+       415                   0.0415                       0         16771.412827685      -18029768.05092728   0.0002400796066738126    0.009520407065675305
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       416                   0.0416                       0         17225.723375615      -18029768.05093149   0.0003066172727459598     0.01102840645016958
+       416                   0.0416                       0         17225.723375615      -18029768.05093149   0.0003066172727459598     0.01102840645016958
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       417                   0.0417                       0         17678.452125319      -18029768.05094159   0.0003757987736688131     0.01355677763634897
+       417                   0.0417                       0         17678.452125319      -18029768.05094159   0.0003757987736688131     0.01355677763634897
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       418                   0.0418                       0         18131.839520511      -18029768.05094776   0.0003001144346835745      0.0107229309027314
+       418                   0.0418                       0         18131.839520511      -18029768.05094776   0.0003001144346835745      0.0107229309027314
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       419                   0.0419                       0         18587.231697258      -18029768.05095413    0.000387047947423818     0.01058901457956215
+       419                   0.0419                       0         18587.231697258      -18029768.05095413    0.000387047947423818     0.01058901457956215
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       420                    0.042                       0         19041.378085445      -18029768.05095846   0.0002784539749881507    0.009987941642701993
+       420                    0.042                       0         19041.378085445      -18029768.05095846   0.0002784539749881507    0.009987941642701993
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       421                   0.0421                       0          19493.15005891      -18029768.05096625   0.0003219522176361646     0.01255184211355392
+       421                   0.0421                       0          19493.15005891      -18029768.05096625   0.0003219522176361646     0.01255184211355392
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       422                   0.0422                       0         19948.203358814      -18029768.05097169   0.0002178934633957487    0.009172387810021597
+       422                   0.0422                       0         19948.203358814      -18029768.05097169   0.0002178934633957487    0.009172387810021597
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       423                   0.0423                       0         20401.820106457      -18029768.05097633   0.0003441284425114016     0.01008479790181993
+       423                   0.0423                       0         20401.820106457      -18029768.05097633   0.0003441284425114016     0.01008479790181993
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       424                   0.0424                       0         20856.327307051      -18029768.05098061   0.0002386863691414118     0.00910734113498133
+       424                   0.0424                       0         20856.327307051      -18029768.05098061   0.0002386863691414118     0.00910734113498133
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       425                   0.0425                       0         21309.043839929      -18029768.05098532   0.0002704460726651418    0.009391478345544942
+       425                   0.0425                       0         21309.043839929      -18029768.05098532   0.0002704460726651418    0.009391478345544942
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       426                   0.0426                       0         21762.212148138      -18029768.05098835   0.0001598680740239559    0.006837387698043686
+       426                   0.0426                       0         21762.212148138      -18029768.05098835   0.0001598680740239559    0.006837387698043686
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       427                   0.0427                       0          22217.86274033      -18029768.05099093   0.0001962637781067171    0.007321297169732106
+       427                   0.0427                       0          22217.86274033      -18029768.05099093   0.0001962637781067171    0.007321297169732106
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       428                   0.0428                       0         22670.711350984      -18029768.05099323   0.0001862891549810342    0.007046615460288083
+       428                   0.0428                       0         22670.711350984      -18029768.05099323   0.0001862891549810342    0.007046615460288083
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       429                   0.0429                       0         23122.683329493      -18029768.05099658   0.0002261749159715061    0.008148108542395513
+       429                   0.0429                       0         23122.683329493      -18029768.05099658   0.0002261749159715061    0.008148108542395513
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       430                    0.043                       0          23574.19993699      -18029768.05099895   0.0001553281687430649    0.006681045688228355
+       430                    0.043                       0          23574.19993699      -18029768.05099895   0.0001553281687430649    0.006681045688228355
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       431                   0.0431                       0         24029.059532502      -18029768.05100207   0.0002769804219919375    0.008495050329372629
+       431                   0.0431                       0         24029.059532502      -18029768.05100207   0.0002769804219919375    0.008495050329372629
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       432                   0.0432                       0         24482.297344884      -18029768.05100521   0.0002003116712044131    0.008251225799103923
+       432                   0.0432                       0         24482.297344884      -18029768.05100521   0.0002003116712044131    0.008251225799103923
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       433                   0.0433                       0         24935.928955029      -18029768.05100964   0.0002368878469065069     0.00904468687961687
+       433                   0.0433                       0         24935.928955029      -18029768.05100964   0.0002368878469065069     0.00904468687961687
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       434                   0.0434                       0         25388.634127645      -18029768.05101276   0.0001841171747390636     0.00753080270108994
+       434                   0.0434                       0         25388.634127645      -18029768.05101276   0.0001841171747390636     0.00753080270108994
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       435                   0.0435                       0          25843.90185297      -18029768.05101639   0.0002586317088838874    0.008897867292915536
+       435                   0.0435                       0          25843.90185297      -18029768.05101639   0.0002586317088838874    0.008897867292915536
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       436                   0.0436                       0         26296.166026664      -18029768.05101965   0.0001798071512866747    0.007773630217564271
+       436                   0.0436                       0         26296.166026664      -18029768.05101965   0.0001798071512866747    0.007773630217564271
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       437                   0.0437                       0         26749.096636274      -18029768.05102301   0.0002443453254132033    0.007968349909333884
+       437                   0.0437                       0         26749.096636274      -18029768.05102301   0.0002443453254132033    0.007968349909333884
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       438                   0.0438                       0         27201.663474963      -18029768.05102537   0.0001602150551257911    0.006547597907713301
+       438                   0.0438                       0         27201.663474963      -18029768.05102537   0.0001602150551257911    0.006547597907713301
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       439                   0.0439                       0         27655.222390898      -18029768.05102801   0.0002129434498698256     0.00779998541994376
+       439                   0.0439                       0         27655.222390898      -18029768.05102801   0.0002129434498698256     0.00779998541994376
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       440                    0.044                       0         28106.488136138      -18029768.05103055    0.000145668041495303    0.006453685314519481
+       440                    0.044                       0         28106.488136138      -18029768.05103055    0.000145668041495303    0.006453685314519481
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       441                   0.0441                       0         28561.685405019      -18029768.05103277   0.0001867284642006484    0.006788869309973677
+       441                   0.0441                       0         28561.685405019      -18029768.05103277   0.0001867284642006484    0.006788869309973677
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       442                   0.0442                       0         29015.873011908      -18029768.05103456   0.0001114727384982916    0.005495809685756325
+       442                   0.0442                       0         29015.873011908      -18029768.05103456   0.0001114727384982916    0.005495809685756325
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       443                   0.0443                       0         29470.835705759      -18029768.05103636   0.0001977248708324441    0.006370563016984649
+       443                   0.0443                       0         29470.835705759      -18029768.05103636   0.0001977248708324441    0.006370563016984649
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       444                   0.0444                       0         29924.713739899      -18029768.05103795   0.0001163497974035384     0.00513357345169456
+       444                   0.0444                       0         29924.713739899      -18029768.05103795   0.0001163497974035384     0.00513357345169456
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       445                   0.0445                       0         30377.705277778      -18029768.05103947    0.000181120979923035    0.005910676054667408
+       445                   0.0445                       0         30377.705277778      -18029768.05103947    0.000181120979923035    0.005910676054667408
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       446                   0.0446                       0         30832.301320886      -18029768.05104096   0.0001325928427394731    0.005266109240300396
+       446                   0.0446                       0         30832.301320886      -18029768.05104096   0.0001325928427394731    0.005266109240300396
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       447                   0.0447                       0         31285.793394924      -18029768.05104283   0.0002035237730215982    0.006730180418249734
+       447                   0.0447                       0         31285.793394924      -18029768.05104283   0.0002035237730215982    0.006730180418249734
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       448                   0.0448                       0         31741.461654852      -18029768.05104469    0.000127771016408052    0.005476018563999535
+       448                   0.0448                       0         31741.461654852      -18029768.05104469    0.000127771016408052    0.005476018563999535
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       449                   0.0449                       0         32196.222253095      -18029768.05104638   0.0001914099524764567    0.006182947236372326
+       449                   0.0449                       0         32196.222253095      -18029768.05104638   0.0001914099524764567    0.006182947236372326
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       450                    0.045                       0         32649.023429294      -18029768.05104799    0.000130197802937629    0.005561628707807529
+       450                    0.045                       0         32649.023429294      -18029768.05104799    0.000130197802937629    0.005561628707807529
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       451                   0.0451                       0         33101.863763222      -18029768.05105002   0.0002072536562932855    0.007038579982524417
+       451                   0.0451                       0         33101.863763222      -18029768.05105002   0.0002072536562932855    0.007038579982524417
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       452                   0.0452                       0         33557.334761747      -18029768.05105211    0.000127733252349195    0.005929074885207402
+       452                   0.0452                       0         33557.334761747      -18029768.05105211    0.000127733252349195    0.005929074885207402
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       453                   0.0453                       0         34011.510625466      -18029768.05105429   0.0002612861649625609    0.007140138547926599
+       453                   0.0453                       0         34011.510625466      -18029768.05105429   0.0002612861649625609    0.007140138547926599
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       454                   0.0454                       0         34465.189831379       -18029768.0510565   0.0001576143029864821    0.006492043146879313
+       454                   0.0454                       0         34465.189831379       -18029768.0510565   0.0001576143029864821    0.006492043146879313
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       455                   0.0455                       0         34919.266888306      -18029768.05105916   0.0002481206679584982    0.007550167626223184
+       455                   0.0455                       0         34919.266888306      -18029768.05105916   0.0002481206679584982    0.007550167626223184
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       456                   0.0456                       0       35373.15178612299      -18029768.05106134   0.0001400224683717077     0.00585525114845387
+       456                   0.0456                       0       35373.15178612299      -18029768.05106134   0.0001400224683717077     0.00585525114845387
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       457                   0.0457                       0         35827.334301187      -18029768.05106325   0.0001905129613845487    0.006686924267798496
+       457                   0.0457                       0         35827.334301187      -18029768.05106325   0.0001905129613845487    0.006686924267798496
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       458                   0.0458                       0         36279.992875076      -18029768.05106504   0.0001386724420324694    0.005594521317574935
+       458                   0.0458                       0         36279.992875076      -18029768.05106504   0.0001386724420324694    0.005594521317574935
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       459                   0.0459                       0         36732.602423937      -18029768.05106696   0.0001916324997100934    0.006305904182320314
+       459                   0.0459                       0         36732.602423937      -18029768.05106696   0.0001916324997100934    0.006305904182320314
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       460                    0.046                       0         37184.779215639      -18029768.05106858   0.0001280518898392126     0.00546418017639273
+       460                    0.046                       0         37184.779215639      -18029768.05106858   0.0001280518898392126     0.00546418017639273
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       461                   0.0461                       0         37638.708995895      -18029768.05107058   0.0002267869615031858    0.007039412155063139
+       461                   0.0461                       0         37638.708995895      -18029768.05107058   0.0002267869615031858    0.007039412155063139
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       462                   0.0462                       0         38092.421824728      -18029768.05107268   0.0001337086680179324    0.006067105779402652
+       462                   0.0462                       0         38092.421824728      -18029768.05107268   0.0001337086680179324    0.006067105779402652
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       463                   0.0463                       0         38547.674051726      -18029768.05107475   0.0002051914513650638    0.006860686298389693
+       463                   0.0463                       0         38547.674051726      -18029768.05107475   0.0002051914513650638    0.006860686298389693
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       464                   0.0464                       0         39002.088448282      -18029768.05107684   0.0001519121535310322    0.006193466329562038
+       464                   0.0464                       0         39002.088448282      -18029768.05107684   0.0001519121535310322    0.006193466329562038
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       465                   0.0465                       0           39455.6104892      -18029768.05107922   0.0002200552593336321    0.007611142783730483
+       465                   0.0465                       0           39455.6104892      -18029768.05107922   0.0002200552593336321    0.007611142783730483
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       466                   0.0466                       0         39909.831223667      -18029768.05108166   0.0001436693435309579    0.006092967408675471
+       466                   0.0466                       0         39909.831223667      -18029768.05108166   0.0001436693435309579    0.006092967408675471
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       467                   0.0467                       0         40362.535324093      -18029768.05108377   0.0002147542800542454    0.006881207499703036
+       467                   0.0467                       0         40362.535324093      -18029768.05108377   0.0002147542800542454    0.006881207499703036
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       468                   0.0468                       0         40815.417314633      -18029768.05108584   0.0001453443312315464    0.005787535431801451
+       468                   0.0468                       0         40815.417314633      -18029768.05108584   0.0001453443312315464    0.005787535431801451
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       469                   0.0469                       0          41268.87071547      -18029768.05108774   0.0001755817617478603    0.006356291876755044
+       469                   0.0469                       0          41268.87071547      -18029768.05108774   0.0001755817617478603    0.006356291876755044
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       470                    0.047                       0         41724.448042284      -18029768.05108931   0.0001228114128601671      0.0049585451016772
+       470                    0.047                       0         41724.448042284      -18029768.05108931   0.0001228114128601671      0.0049585451016772
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       471                   0.0471                       0         42178.939318226      -18029768.05109067   0.0001660053528436539    0.005784267922274617
+       471                   0.0471                       0         42178.939318226      -18029768.05109067   0.0001660053528436539    0.005784267922274617
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       472                   0.0472                       0         42631.278157281      -18029768.05109217   0.0001493894812364949    0.004917043296704242
+       472                   0.0472                       0         42631.278157281      -18029768.05109217   0.0001493894812364949    0.004917043296704242
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       473                   0.0473                       0         43085.018802234      -18029768.05109357   0.0001521500855329958    0.005772995126763132
+       473                   0.0473                       0         43085.018802234      -18029768.05109357   0.0001521500855329958    0.005772995126763132
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       474                   0.0474                       0         43537.698100694      -18029768.05109499   0.0001303987351716218    0.004978685626024704
+       474                   0.0474                       0         43537.698100694      -18029768.05109499   0.0001303987351716218    0.004978685626024704
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       475                   0.0475                       0         43991.077306994      -18029768.05109657   0.0002279143199035727    0.006390351019645405
+       475                   0.0475                       0         43991.077306994      -18029768.05109657   0.0002279143199035727    0.006390351019645405
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       476                   0.0476                       0         44444.323566673      -18029768.05109825   0.0001335697728390983    0.005219592709522256
+       476                   0.0476                       0         44444.323566673      -18029768.05109825   0.0001335697728390983    0.005219592709522256
+WARNING: Too many warnings: 101 vs 100. All future warnings will be suppressed (src/thermo.cpp:466)
+WARNING: Too many warnings: 101 vs 100. All future warnings will be suppressed (src/thermo.cpp:466)
+       477                   0.0477                       0         44896.318004843      -18029768.05109968   0.0001595303254580244    0.005813053997351571
+       477                   0.0477                       0         44896.318004843      -18029768.05109968   0.0001595303254580244    0.005813053997351571
+       478                   0.0478                       0         45351.256277498      -18029768.05110124   0.0001320783877941101    0.005109249471409421
+       478                   0.0478                       0         45351.256277498      -18029768.05110124   0.0001320783877941101    0.005109249471409421
+       479                   0.0479                       0         45803.199191181       -18029768.0511028   0.0001782554148014233    0.006229408241022784
+       479                   0.0479                       0         45803.199191181       -18029768.0511028   0.0001782554148014233    0.006229408241022784
+       480                    0.048                       0         46256.781534602      -18029768.05110437   0.0001113226781220056    0.004894966268355808
+       480                    0.048                       0         46256.781534602      -18029768.05110437   0.0001113226781220056    0.004894966268355808
+       481                   0.0481                       0         46712.223127834      -18029768.05110561   0.0001606970470766911    0.005315971041045782
+       481                   0.0481                       0         46712.223127834      -18029768.05110561   0.0001606970470766911    0.005315971041045782
+       482                   0.0482                       0         47165.043546215       -18029768.0511068   9.596779433045159e-05    0.004212237191990166
+       482                   0.0482                       0         47165.043546215       -18029768.0511068   9.596779433045159e-05    0.004212237191990166
+       483                   0.0483                       0          47618.13977798      -18029768.05110774   0.0001454804821242508    0.004795052851797736
+       483                   0.0483                       0          47618.13977798      -18029768.05110774   0.0001454804821242508    0.004795052851797736
+       484                   0.0484                       0         48069.049533079       -18029768.0511087   9.626429708527087e-05    0.003778083640374199
+       484                   0.0484                       0         48069.049533079       -18029768.0511087   9.626429708527087e-05    0.003778083640374199
+       485                   0.0485                       0         48522.460487585      -18029768.05110949   0.0001626292108035678    0.004548933515267739
+       485                   0.0485                       0         48522.460487585      -18029768.05110949   0.0001626292108035678    0.004548933515267739
+       486                   0.0486                       0         48975.037425787      -18029768.05111048   8.988798468296047e-05    0.004012137694404495
+       486                   0.0486                       0         48975.037425787      -18029768.05111048   8.988798468296047e-05    0.004012137694404495
+       487                   0.0487                       0         49429.664392963      -18029768.05111138   0.0001421011332722218    0.004702291198750633
+       487                   0.0487                       0         49429.664392963      -18029768.05111138   0.0001421011332722218    0.004702291198750633
+       488                   0.0488                       0         49882.083960489      -18029768.05111237   0.0001183734782180187    0.004006383222749263
+       488                   0.0488                       0         49882.083960489      -18029768.05111237   0.0001183734782180187    0.004006383222749263
+       489                   0.0489                       0         50336.828256687      -18029768.05111327   0.0001306182103795162      0.0048364157213556
+       489                   0.0489                       0         50336.828256687      -18029768.05111327   0.0001306182103795162      0.0048364157213556
+       490                    0.049                       0         50791.767088982      -18029768.05111443   0.0001179491860490755    0.004387794214859478
+       490                    0.049                       0         50791.767088982      -18029768.05111443   0.0001179491860490755    0.004387794214859478
+       491                   0.0491                       0         51245.082169803      -18029768.05111542   0.0001478140525100068    0.004934901678445759
+       491                   0.0491                       0         51245.082169803      -18029768.05111542   0.0001478140525100068    0.004934901678445759
+       492                   0.0492                       0         51698.955072661      -18029768.05111663   0.0001241021469363386    0.004635273736991993
+       492                   0.0492                       0         51698.955072661      -18029768.05111663   0.0001241021469363386    0.004635273736991993
+       493                   0.0493                       0         52154.066638562      -18029768.05111786   0.0001510946106292158    0.005718680312173159
+       493                   0.0493                       0         52154.066638562      -18029768.05111786   0.0001510946106292158    0.005718680312173159
+       494                   0.0494                       0         52608.664909362       -18029768.0511195    0.000119971735177752    0.004819416312849422
+       494                   0.0494                       0         52608.664909362       -18029768.0511195    0.000119971735177752    0.004819416312849422
+       495                   0.0495                       0         53062.865638971      -18029768.05112052    0.000148040919967448    0.004995424499551474
+       495                   0.0495                       0         53062.865638971      -18029768.05112052    0.000148040919967448    0.004995424499551474
+       496                   0.0496                       0         53514.182093928      -18029768.05112177   0.0001138666465634978    0.004501548262844325
+       496                   0.0496                       0         53514.182093928      -18029768.05112177   0.0001138666465634978    0.004501548262844325
+       497                   0.0497                       0         53967.471089004      -18029768.05112279   0.0001535070643452539    0.004952848674683429
+       497                   0.0497                       0         53967.471089004      -18029768.05112279   0.0001535070643452539    0.004952848674683429
+       498                   0.0498                       0          54420.90685112      -18029768.05112392   0.0001144522213976194    0.004115231419225611
+       498                   0.0498                       0          54420.90685112      -18029768.05112392   0.0001144522213976194    0.004115231419225611
+       499                   0.0499                       0         54873.375873059      -18029768.05112477   0.0001237959467702131    0.004493454835200508
+       499                   0.0499                       0         54873.375873059      -18029768.05112477   0.0001237959467702131    0.004493454835200508
+       500                     0.05                       0         55327.718377695      -18029768.05112572   0.0001041454968651499    0.004011294465068929
+       500                     0.05                       0         55327.718377695      -18029768.05112572   0.0001041454968651499    0.004011294465068929
+       501                   0.0501                       0         55782.041009833      -18029768.05112648   0.0001219332848974867    0.004402620387642492
+       501                   0.0501                       0         55782.041009833      -18029768.05112648   0.0001219332848974867    0.004402620387642492
+       502                   0.0502                       0         56233.628245925      -18029768.05112744   9.253384561946909e-05    0.003810517094500984
+       502                   0.0502                       0         56233.628245925      -18029768.05112744   9.253384561946909e-05    0.003810517094500984
+       503                   0.0503                       0         56686.108447651      -18029768.05112812   0.0001219628617771286     0.00414672816452489
+       503                   0.0503                       0         56686.108447651      -18029768.05112812   0.0001219628617771286     0.00414672816452489
+       504                   0.0504                       0         57140.447029145      -18029768.05112901   9.799028376086892e-05    0.003722009587240384
+       504                   0.0504                       0         57140.447029145      -18029768.05112901   9.799028376086892e-05    0.003722009587240384
+       505                   0.0505                       0         57593.738075659      -18029768.05112971   0.0001266776344795717    0.004222951322721258
+       505                   0.0505                       0         57593.738075659      -18029768.05112971   0.0001266776344795717    0.004222951322721258
+       506                   0.0506                       0         58046.528658434      -18029768.05113062   0.0001085760744839591    0.003870266943139798
+       506                   0.0506                       0         58046.528658434      -18029768.05113062   0.0001085760744839591    0.003870266943139798
+       507                   0.0507                       0         58498.943872417      -18029768.05113139   0.0001421921960036312    0.004666029030921419
+       507                   0.0507                       0         58498.943872417      -18029768.05113139   0.0001421921960036312    0.004666029030921419
+       508                   0.0508                       0         58951.576966999      -18029768.05113273   0.0001169576809746826    0.004748730069660057
+       508                   0.0508                       0         58951.576966999      -18029768.05113273   0.0001169576809746826    0.004748730069660057
+       509                   0.0509                       0         59405.799897998      -18029768.05113385   0.0001486201233411024    0.005207397888880163
+       509                   0.0509                       0         59405.799897998      -18029768.05113385   0.0001486201233411024    0.005207397888880163
+       510                    0.051                       0         59860.076033041      -18029768.05113516   0.0001027278468915221    0.004282008559182886
+       510                    0.051                       0         59860.076033041      -18029768.05113516   0.0001027278468915221    0.004282008559182886
+       511                   0.0511                       0         60314.703093863      -18029768.05113607   0.0001428100766962445    0.004549475134949531
+       511                   0.0511                       0         60314.703093863      -18029768.05113607   0.0001428100766962445    0.004549475134949531
+       512                   0.0512                       0         60770.244693362      -18029768.05113703   9.468855884632303e-05    0.003722767301212717
+       512                   0.0512                       0         60770.244693362      -18029768.05113703   9.468855884632303e-05    0.003722767301212717
+       513                   0.0513                       0         61221.660021508       -18029768.0511377   0.0001194995002715927    0.004057209936894494
+       513                   0.0513                       0         61221.660021508       -18029768.0511377   0.0001194995002715927    0.004057209936894494
+       514                   0.0514                       0         61675.291895723      -18029768.05113854   0.0001085758525309066    0.003591099299397235
+       514                   0.0514                       0         61675.291895723      -18029768.05113854   0.0001085758525309066    0.003591099299397235
+       515                   0.0515                       0          62127.33619319      -18029768.05113915   0.0001115351841653647    0.003859622023292374
+       515                   0.0515                       0          62127.33619319      -18029768.05113915   0.0001115351841653647    0.003859622023292374
+       516                   0.0516                       0         62580.770061112      -18029768.05113987   7.930376564453309e-05    0.003207406640406839
+       516                   0.0516                       0         62580.770061112      -18029768.05113987   7.930376564453309e-05    0.003207406640406839
+       517                   0.0517                       0         63034.219235235      -18029768.05114032   8.928150516605587e-05    0.003189389194396204
+       517                   0.0517                       0         63034.219235235      -18029768.05114032   8.928150516605587e-05    0.003189389194396204
+       518                   0.0518                       0         63485.519750857      -18029768.05114076    7.57864471972354e-05     0.00271002751964056
+       518                   0.0518                       0         63485.519750857      -18029768.05114076    7.57864471972354e-05     0.00271002751964056
+       519                   0.0519                       0         63939.505563081      -18029768.05114112   8.225145736341297e-05    0.002822620127958966
+       519                   0.0519                       0         63939.505563081      -18029768.05114112   8.225145736341297e-05    0.002822620127958966
+       520                    0.052                       0         64391.998973803      -18029768.05114153   7.646818508187138e-05    0.002735612944059878
+       520                    0.052                       0         64391.998973803      -18029768.05114153   7.646818508187138e-05    0.002735612944059878
+       521                   0.0521                       0         64844.446558852      -18029768.05114187   9.451673177275632e-05      0.0030533433918686
+       521                   0.0521                       0         64844.446558852      -18029768.05114187   9.451673177275632e-05      0.0030533433918686
+       522                   0.0522                       0       65297.32113261599      -18029768.05114242   7.749050472563999e-05    0.002930155597096308
+       522                   0.0522                       0       65297.32113261599      -18029768.05114242   7.749050472563999e-05    0.002930155597096308
+       523                   0.0523                       0       65750.81592300801      -18029768.05114283    8.65836586016874e-05    0.002900356038315864
+       523                   0.0523                       0       65750.81592300801      -18029768.05114283    8.65836586016874e-05    0.002900356038315864
+       524                   0.0524                       0          66204.69629792      -18029768.05114327   6.005602820320297e-05    0.002495936578306995
+       524                   0.0524                       0          66204.69629792      -18029768.05114327   6.005602820320297e-05    0.002495936578306995
+       525                   0.0525                       0         66657.735876416      -18029768.05114354   7.639846619113559e-05    0.002765781671807727
+       525                   0.0525                       0         66657.735876416      -18029768.05114354   7.639846619113559e-05    0.002765781671807727
+       526                   0.0526                       0       67111.70957319799      -18029768.05114398   7.002085726715349e-05    0.002742869428519482
+       526                   0.0526                       0       67111.70957319799      -18029768.05114398   7.002085726715349e-05    0.002742869428519482
+       527                   0.0527                       0         67565.523038292      -18029768.05114437     8.2111483429119e-05    0.003020175686796319
+       527                   0.0527                       0         67565.523038292      -18029768.05114437     8.2111483429119e-05    0.003020175686796319
+       528                   0.0528                       0          68018.18721203       -18029768.0511448    6.05701761335462e-05    0.002745486849202793
+       528                   0.0528                       0          68018.18721203       -18029768.0511448    6.05701761335462e-05    0.002745486849202793
+       529                   0.0529                       0         68470.491722737      -18029768.05114519    7.92212196041725e-05    0.003082670443157785
+       529                   0.0529                       0         68470.491722737      -18029768.05114519    7.92212196041725e-05    0.003082670443157785
+       530                    0.053                       0         68925.992129675      -18029768.05114569   6.227725035073614e-05    0.002608241546281442
+       530                    0.053                       0         68925.992129675      -18029768.05114569   6.227725035073614e-05    0.002608241546281442
+       531                   0.0531                       0         69379.387104614      -18029768.05114591   9.173353395048234e-05    0.002630751289017313
+       531                   0.0531                       0         69379.387104614      -18029768.05114591   9.173353395048234e-05    0.002630751289017313
+       532                   0.0532                       0       69831.72588732399      -18029768.05114632    5.84285092841458e-05    0.002295735985211349
+       532                   0.0532                       0       69831.72588732399      -18029768.05114632    5.84285092841458e-05    0.002295735985211349
+       533                   0.0533                       0       70288.80004555899      -18029768.05114652   6.155701232753857e-05    0.002280376900665956
+       533                   0.0533                       0       70288.80004555899      -18029768.05114652   6.155701232753857e-05    0.002280376900665956
+       534                   0.0534                       0       70742.81974942501      -18029768.05114678   4.892217662892732e-05    0.001962857344578997
+       534                   0.0534                       0       70742.81974942501      -18029768.05114678   4.892217662892732e-05    0.001962857344578997
+       535      0.05350000000000001                       0       71195.38733598001      -18029768.05114695   5.647704884440643e-05     0.00205518547107805
+       535      0.05350000000000001                       0       71195.38733598001      -18029768.05114695   5.647704884440643e-05     0.00205518547107805
+       536                   0.0536                       0       71647.90208851099       -18029768.0511472   4.387658703008945e-05    0.001909887557407424
+       536                   0.0536                       0       71647.90208851099       -18029768.0511472   4.387658703008945e-05    0.001909887557407424
+       537                   0.0537                       0       72101.41192345599      -18029768.05114735   5.467912509938511e-05    0.002041947422279072
+       537                   0.0537                       0       72101.41192345599      -18029768.05114735   5.467912509938511e-05    0.002041947422279072
+       538                   0.0538                       0         72555.307135353       -18029768.0511476   4.304540852970162e-05    0.001825786411950013
+       538                   0.0538                       0         72555.307135353       -18029768.0511476   4.304540852970162e-05    0.001825786411950013
+       539                   0.0539                       0         73008.333944065      -18029768.05114772   5.023564363091184e-05    0.001927193231906463
+       539                   0.0539                       0         73008.333944065      -18029768.05114772   5.023564363091184e-05    0.001927193231906463
+       540                    0.054                       0         73463.315841555      -18029768.05114792   4.329505264161052e-05     0.00171874552888418
+       540                    0.054                       0         73463.315841555      -18029768.05114792   4.329505264161052e-05     0.00171874552888418
+       541                   0.0541                       0       73918.83146713099      -18029768.05114807   4.682684270657187e-05    0.001768138680377848
+       541                   0.0541                       0       73918.83146713099      -18029768.05114807   4.682684270657187e-05    0.001768138680377848
+       542                   0.0542                       0         74371.234153604      -18029768.05114822   4.219262329069329e-05    0.001686700267058874
+       542                   0.0542                       0         74371.234153604      -18029768.05114822   4.219262329069329e-05    0.001686700267058874
+       543                   0.0543                       0         74824.966499528       -18029768.0511484   4.679446781825566e-05    0.001781794593898087
+       543                   0.0543                       0         74824.966499528       -18029768.0511484   4.679446781825566e-05    0.001781794593898087
+       544                   0.0544                       0         75279.169167856      -18029768.05114852   4.698938787614515e-05    0.001562016957091464
+       544                   0.0544                       0         75279.169167856      -18029768.05114852   4.698938787614515e-05    0.001562016957091464
+       545                   0.0545                       0         75733.008295343      -18029768.05114862   3.586329399695234e-05    0.001542756222134174
+       545                   0.0545                       0         75733.008295343      -18029768.05114862   3.586329399695234e-05    0.001542756222134174
+       546                   0.0546                       0         76186.958818381      -18029768.05114877     3.8834242139036e-05    0.001497143422196523
+       546                   0.0546                       0         76186.958818381      -18029768.05114877     3.8834242139036e-05    0.001497143422196523
+       547                   0.0547                       0         76640.729776273      -18029768.05114884   3.660420171485226e-05    0.001569712721427032
+       547                   0.0547                       0         76640.729776273      -18029768.05114884   3.660420171485226e-05    0.001569712721427032
+       548                   0.0548                       0          77094.91330872      -18029768.05114897   4.357296967397867e-05    0.001513616145062098
+       548                   0.0548                       0          77094.91330872      -18029768.05114897   4.357296967397867e-05    0.001513616145062098
+       549                   0.0549                       0         77548.191205262      -18029768.05114911    4.48553708265291e-05     0.00153661917076779
+       549                   0.0549                       0         77548.191205262      -18029768.05114911    4.48553708265291e-05     0.00153661917076779
+       550                    0.055                       0       78001.13059502799      -18029768.05114922   4.764882005204663e-05    0.001542353856155971
+       550                    0.055                       0       78001.13059502799      -18029768.05114922   4.764882005204663e-05    0.001542353856155971
+       551                   0.0551                       0       78455.26507403899      -18029768.05114934   4.173618388574099e-05    0.001550323971717222
+       551                   0.0551                       0       78455.26507403899      -18029768.05114934   4.173618388574099e-05    0.001550323971717222
+       552                   0.0552                       0         78909.278230824      -18029768.05114948   4.148769042795764e-05    0.001519925336748662
+       552                   0.0552                       0         78909.278230824      -18029768.05114948   4.148769042795764e-05    0.001519925336748662
+       553                   0.0553                       0         79361.159815112      -18029768.05114958   4.585603123643915e-05    0.001605998767909341
+       553                   0.0553                       0         79361.159815112      -18029768.05114958   4.585603123643915e-05    0.001605998767909341
+       554                   0.0554                       0         79813.809804098      -18029768.05114975   4.964207316925454e-05    0.001486995348155951
+       554                   0.0554                       0         79813.809804098      -18029768.05114975   4.964207316925454e-05    0.001486995348155951
+       555                   0.0555                       0         80267.673875136      -18029768.05114985   4.983443255456114e-05    0.001578885721787687
+       555                   0.0555                       0         80267.673875136      -18029768.05114985   4.983443255456114e-05    0.001578885721787687
+       556                   0.0556                       0         80720.836804265      -18029768.05114998   3.576275399775795e-05    0.001461564885456469
+       556                   0.0556                       0         80720.836804265      -18029768.05114998   3.576275399775795e-05    0.001461564885456469
+       557                   0.0557                       0         81176.847800713      -18029768.05115004   4.809228024107038e-05    0.001712965165710532
+       557                   0.0557                       0         81176.847800713      -18029768.05115004   4.809228024107038e-05    0.001712965165710532
+       558                   0.0558                       0       81630.43351992501      -18029768.05115023   4.625789370719946e-05    0.001614469891173991
+       558                   0.0558                       0       81630.43351992501      -18029768.05115023   4.625789370719946e-05    0.001614469891173991
+       559      0.05590000000000001                       0         82082.414299975      -18029768.05115036   4.206667957621792e-05    0.001609417809255336
+       559      0.05590000000000001                       0         82082.414299975      -18029768.05115036   4.206667957621792e-05    0.001609417809255336
+       560                    0.056                       0           82536.2848064      -18029768.05115052   3.083912285179481e-05    0.001428394643821642
+       560                    0.056                       0           82536.2848064      -18029768.05115052   3.083912285179481e-05    0.001428394643821642
+       561                   0.0561                       0         82991.965485162      -18029768.05115058   3.728105639857564e-05    0.001457390326989456
+       561                   0.0561                       0         82991.965485162      -18029768.05115058   3.728105639857564e-05    0.001457390326989456
+       562                   0.0562                       0         83445.999021828      -18029768.05115069   3.287233384831334e-05    0.001445023370161051
+       562                   0.0562                       0         83445.999021828      -18029768.05115069   3.287233384831334e-05    0.001445023370161051
+       563                   0.0563                       0       83900.23051671199      -18029768.05115081    4.15199557152815e-05    0.001465211219857862
+       563                   0.0563                       0       83900.23051671199      -18029768.05115081    4.15199557152815e-05    0.001465211219857862
+       564      0.05640000000000001                       0         84354.052275728      -18029768.05115092   3.900184894116421e-05    0.001459241815042796
+       564      0.05640000000000001                       0         84354.052275728      -18029768.05115092   3.900184894116421e-05    0.001459241815042796
+       565                   0.0565                       0       84806.59251519899      -18029768.05115104    3.68849766507473e-05    0.001437304147472711
+       565                   0.0565                       0       84806.59251519899      -18029768.05115104    3.68849766507473e-05    0.001437304147472711
+       566                   0.0566                       0         85260.168285589      -18029768.05115114   4.143987914209321e-05    0.001367392641765262
+       566                   0.0566                       0         85260.168285589      -18029768.05115114   4.143987914209321e-05    0.001367392641765262
+       567                   0.0567                       0         85713.667282746       -18029768.0511512   4.467223425294251e-05    0.001396870933725894
+       567                   0.0567                       0         85713.667282746       -18029768.0511512   4.467223425294251e-05    0.001396870933725894
+       568                   0.0568                       0         86168.482589949      -18029768.05115132   3.752001753338911e-05    0.001504361383073518
+       568                   0.0568                       0         86168.482589949      -18029768.05115132   3.752001753338911e-05    0.001504361383073518
+       569      0.05690000000000001                       0         86622.148586888      -18029768.05115141   5.109697127404734e-05    0.001669250768850549
+       569      0.05690000000000001                       0         86622.148586888      -18029768.05115141   5.109697127404734e-05    0.001669250768850549
+       570                    0.057                       0       87075.53426321301      -18029768.05115162   5.290647758685496e-05    0.001782504309645366
+       570                    0.057                       0       87075.53426321301      -18029768.05115162   5.290647758685496e-05    0.001782504309645366
+       571                   0.0571                       0         87529.153374178      -18029768.05115174   4.688713716705095e-05    0.001734020878135703
+       571                   0.0571                       0         87529.153374178      -18029768.05115174   4.688713716705095e-05    0.001734020878135703
+       572                   0.0572                       0         87982.126644298      -18029768.05115192   5.170563781040725e-05    0.001735809180749345
+       572                   0.0572                       0         87982.126644298      -18029768.05115192   5.170563781040725e-05    0.001735809180749345
+       573                   0.0573                       0         88436.752936433      -18029768.05115202   4.310820536393423e-05     0.00170593580678619
+       573                   0.0573                       0         88436.752936433      -18029768.05115202   4.310820536393423e-05     0.00170593580678619
+       574                   0.0574                       0       88890.56087874901      -18029768.05115222    5.70401075670815e-05    0.001875699884846671
+       574                   0.0574                       0       88890.56087874901      -18029768.05115222    5.70401075670815e-05    0.001875699884846671
+       575                   0.0575                       0         89343.844743234      -18029768.05115238   4.777401350593044e-05    0.002001389731878381
+       575                   0.0575                       0         89343.844743234      -18029768.05115238   4.777401350593044e-05    0.002001389731878381
+       576                   0.0576                       0         89796.569462247      -18029768.05115264   6.178719210659522e-05    0.002081626492815689
+       576                   0.0576                       0         89796.569462247      -18029768.05115264   6.178719210659522e-05    0.002081626492815689
+       577                   0.0577                       0         90249.005307065      -18029768.05115283   6.710845126759047e-05    0.002119531488014713
+       577                   0.0577                       0         90249.005307065      -18029768.05115283   6.710845126759047e-05    0.002119531488014713
+       578                   0.0578                       0          90703.08287517      -18029768.05115311   6.376270516844987e-05    0.002373451541966263
+       578                   0.0578                       0          90703.08287517      -18029768.05115311   6.376270516844987e-05    0.002373451541966263
+       579                   0.0579                       0         91156.862298112      -18029768.05115337   7.199655779488863e-05     0.00243440485414201
+       579                   0.0579                       0         91156.862298112      -18029768.05115337   7.199655779488863e-05     0.00243440485414201
+       580                    0.058                       0         91608.553483981      -18029768.05115375   7.361302886062585e-05    0.002566234275940513
+       580                    0.058                       0         91608.553483981      -18029768.05115375   7.361302886062585e-05    0.002566234275940513
+       581                   0.0581                       0         92063.729404531        -18029768.051154   7.536715966604407e-05    0.002492641850222433
+       581                   0.0581                       0         92063.729404531        -18029768.051154   7.536715966604407e-05    0.002492641850222433
+       582                   0.0582                       0       92519.12022224799      -18029768.05115439   7.737663338223955e-05    0.002613267138577505
+       582                   0.0582                       0       92519.12022224799      -18029768.05115439   7.737663338223955e-05    0.002613267138577505
+       583                   0.0583                       0         92971.654940712      -18029768.05115467   6.528612159630509e-05    0.002536250724705287
+       583                   0.0583                       0         92971.654940712      -18029768.05115467   6.528612159630509e-05    0.002536250724705287
+       584                   0.0584                       0       93425.92203132701      -18029768.05115507   6.724416435267449e-05    0.002511408360124025
+       584                   0.0584                       0       93425.92203132701      -18029768.05115507   6.724416435267449e-05    0.002511408360124025
+       585                   0.0585                       0         93879.984446754      -18029768.05115529   6.462324225997573e-05    0.002290012269728734
+       585                   0.0585                       0         93879.984446754      -18029768.05115529   6.462324225997573e-05    0.002290012269728734
+       586                   0.0586                       0          94331.91428034      -18029768.05115559   7.347129271078148e-05    0.002447073961704438
+       586                   0.0586                       0          94331.91428034      -18029768.05115559   7.347129271078148e-05    0.002447073961704438
+       587                   0.0587                       0         94784.740318824      -18029768.05115586    6.63341842577353e-05    0.002340091253532961
+       587                   0.0587                       0         94784.740318824      -18029768.05115586    6.63341842577353e-05    0.002340091253532961
+       588      0.05880000000000001                       0          95238.63757902      -18029768.05115623   6.727307065874932e-05    0.002522401212161815
+       588      0.05880000000000001                       0          95238.63757902      -18029768.05115623   6.727307065874932e-05    0.002522401212161815
+       589                   0.0589                       0         95692.486102574      -18029768.05115642   5.111401028193296e-05    0.002218709157251291
+       589                   0.0589                       0         95692.486102574      -18029768.05115642   5.111401028193296e-05    0.002218709157251291
+       590                    0.059                       0       96144.65613071001      -18029768.05115673   5.899944967863131e-05    0.002374391979330993
+       590                    0.059                       0       96144.65613071001      -18029768.05115673   5.899944967863131e-05    0.002374391979330993
+       591                   0.0591                       0       96597.53593247299      -18029768.05115695   4.721484905051091e-05    0.002033983981598173
+       591                   0.0591                       0       96597.53593247299      -18029768.05115695   4.721484905051091e-05    0.002033983981598173
+       592                   0.0592                       0         97050.908260158      -18029768.05115721   7.446863724252378e-05    0.002293909680775913
+       592                   0.0592                       0         97050.908260158      -18029768.05115721   7.446863724252378e-05    0.002293909680775913
+       593      0.05930000000000001                       0       97505.45181283999      -18029768.05115741   6.391236805476305e-05    0.002093794870233616
+       593      0.05930000000000001                       0       97505.45181283999      -18029768.05115741   6.391236805476305e-05    0.002093794870233616
+       594                   0.0594                       0          97958.19174789      -18029768.05115774    8.67171476111421e-05    0.002346202116824705
+       594                   0.0594                       0          97958.19174789      -18029768.05115774    8.67171476111421e-05    0.002346202116824705
+       595                   0.0595                       0       98411.13695639699      -18029768.05115794   6.092615768212614e-05    0.001995709148538581
+       595                   0.0595                       0       98411.13695639699      -18029768.05115794   6.092615768212614e-05    0.001995709148538581
+       596                   0.0596                       0         98864.794045428      -18029768.05115823   5.737100521821872e-05    0.002221342034303841
+       596                   0.0596                       0         98864.794045428      -18029768.05115823   5.737100521821872e-05    0.002221342034303841
+       597                   0.0597                       0       99317.17687482201      -18029768.05115842   6.083378719740073e-05    0.001983094567783913
+       597                   0.0597                       0       99317.17687482201      -18029768.05115842   6.083378719740073e-05    0.001983094567783913
+       598      0.05980000000000001                       0       99770.48486075799      -18029768.05115859   6.486206441434121e-05    0.002046423313443083
+       598      0.05980000000000001                       0       99770.48486075799      -18029768.05115859   6.486206441434121e-05    0.002046423313443083
+       599                   0.0599                       0        100224.397390794      -18029768.05115879   4.670785797734715e-05    0.001729366739712879
+       599                   0.0599                       0        100224.397390794      -18029768.05115879   4.670785797734715e-05    0.001729366739712879
+       600                     0.06                       0        100678.927785515      -18029768.05115893   5.591261734495169e-05    0.001879271841122008
+       600                     0.06                       0        100678.927785515      -18029768.05115893   5.591261734495169e-05    0.001879271841122008
+       601                   0.0601                       0        101134.364320679       -18029768.0511591   5.206141608143922e-05    0.001602577557494687
+       601                   0.0601                       0        101134.364320679       -18029768.0511591   5.206141608143922e-05    0.001602577557494687
+       602                   0.0602                       0        101586.652395113      -18029768.05115926   5.099119655930726e-05    0.001784274397575622
+       602                   0.0602                       0        101586.652395113      -18029768.05115926   5.099119655930726e-05    0.001784274397575622
+       603      0.06030000000000001                       0        102040.825882832      -18029768.05115937   5.319887636281491e-05    0.001701960073660119
+       603      0.06030000000000001                       0        102040.825882832      -18029768.05115937   5.319887636281491e-05    0.001701960073660119
+       604                   0.0604                       0        102496.064904985      -18029768.05115956   5.722246139121603e-05    0.001882001019603155
+       604                   0.0604                       0        102496.064904985      -18029768.05115956   5.722246139121603e-05    0.001882001019603155
+       605                   0.0605                       0        102949.939188494      -18029768.05115972   7.163613978483641e-05    0.001669965386701471
+       605                   0.0605                       0        102949.939188494      -18029768.05115972   7.163613978483641e-05    0.001669965386701471
+       606                   0.0606                       0        103402.550553975      -18029768.05115989   5.389709964864417e-05    0.001873479080614047
+       606                   0.0606                       0        103402.550553975      -18029768.05115989   5.389709964864417e-05    0.001873479080614047
+       607                   0.0607                       0        103857.019354448      -18029768.05116005   5.656334557835319e-05    0.001914669280778777
+       607                   0.0607                       0        103857.019354448      -18029768.05116005   5.656334557835319e-05    0.001914669280778777
+       608                   0.0608                       0        104310.630717592      -18029768.05116028   6.567517415784655e-05    0.002187408376435825
+       608                   0.0608                       0        104310.630717592      -18029768.05116028   6.567517415784655e-05    0.002187408376435825
+       609                   0.0609                       0        104762.842041451      -18029768.05116047   6.066568329168853e-05    0.002082026211374196
+       609                   0.0609                       0        104762.842041451      -18029768.05116047   6.066568329168853e-05    0.002082026211374196
+       610                    0.061                       0        105215.337792514      -18029768.05116075   8.560513936789254e-05    0.002446942487003354
+       610                    0.061                       0        105215.337792514      -18029768.05116075   8.560513936789254e-05    0.002446942487003354
+       611                   0.0611                       0        105668.398584199      -18029768.05116104   6.591595855484265e-05    0.002228953929642565
+       611                   0.0611                       0        105668.398584199      -18029768.05116104   6.591595855484265e-05    0.002228953929642565
+       612                   0.0612                       0        106122.728171656      -18029768.05116135   7.606837180794193e-05    0.002456569741666278
+       612                   0.0612                       0        106122.728171656      -18029768.05116135   7.606837180794193e-05    0.002456569741666278
+       613                   0.0613                       0         106575.08267274      -18029768.05116161   7.800886624367842e-05    0.002290872274063916
+       613                   0.0613                       0         106575.08267274      -18029768.05116161   7.800886624367842e-05    0.002290872274063916
+       614                   0.0614                       0        107027.350453255      -18029768.05116196   8.303379878258209e-05    0.002593458855559186
+       614                   0.0614                       0        107027.350453255      -18029768.05116196   8.303379878258209e-05    0.002593458855559186
+       615                   0.0615                       0        107482.917558943      -18029768.05116222   6.916406579296486e-05    0.002339033729550738
+       615                   0.0615                       0        107482.917558943      -18029768.05116222   6.916406579296486e-05    0.002339033729550738
+       616                   0.0616                       0        107938.003605674      -18029768.05116254   7.417797424016451e-05    0.002661295526996706
+       616                   0.0616                       0        107938.003605674      -18029768.05116254   7.417797424016451e-05    0.002661295526996706
+       617                   0.0617                       0        108389.645041883      -18029768.05116282   6.817046396220827e-05    0.002407166248168721
+       617                   0.0617                       0        108389.645041883      -18029768.05116282   6.817046396220827e-05    0.002407166248168721
+       618                   0.0618                       0        108841.242888163      -18029768.05116321   8.733621622707417e-05    0.002587765491319817
+       618                   0.0618                       0        108841.242888163      -18029768.05116321   8.733621622707417e-05    0.002587765491319817
+       619                   0.0619                       0        109295.381948771      -18029768.05116345   7.229084983434854e-05    0.002289602687764266
+       619                   0.0619                       0        109295.381948771      -18029768.05116345   7.229084983434854e-05    0.002289602687764266
+       620                    0.062                       0        109749.435072165       -18029768.0511638   0.0001044867278488664    0.002788867549615953
+       620                    0.062                       0        109749.435072165       -18029768.0511638   0.0001044867278488664    0.002788867549615953
+       621                   0.0621                       0        110201.597469959      -18029768.05116414   6.975395144315222e-05    0.002616290790650023
+       621                   0.0621                       0        110201.597469959      -18029768.05116414   6.975395144315222e-05    0.002616290790650023
+       622      0.06220000000000001                       0         110654.05188934       -18029768.0511646   9.000389107547107e-05     0.00287123982771448
+       622      0.06220000000000001                       0         110654.05188934       -18029768.0511646   9.000389107547107e-05     0.00287123982771448
+       623                   0.0623                       0        111108.000628199      -18029768.05116489   7.425063580594168e-05    0.002558453075407517
+       623                   0.0623                       0        111108.000628199      -18029768.05116489   7.425063580594168e-05    0.002558453075407517
+       624                   0.0624                       0        111560.624304376      -18029768.05116534   9.602926661350306e-05     0.00302272389281933
+       624                   0.0624                       0        111560.624304376      -18029768.05116534   9.602926661350306e-05     0.00302272389281933
+       625                   0.0625                       0        112014.708004062      -18029768.05116571   8.066217276039844e-05    0.002724816237057987
+       625                   0.0625                       0        112014.708004062      -18029768.05116571   8.066217276039844e-05    0.002724816237057987
+       626                   0.0626                       0         112468.41180169       -18029768.0511661   9.520080930947028e-05     0.00287857374479642
+       626                   0.0626                       0         112468.41180169       -18029768.0511661   9.520080930947028e-05     0.00287857374479642
+       627      0.06270000000000001                       0        112922.804587503      -18029768.05116643   8.802842730892824e-05    0.002356875799677792
+       627      0.06270000000000001                       0        112922.804587503      -18029768.05116643   8.802842730892824e-05    0.002356875799677792
+       628      0.06279999999999999                       0        113375.628451993      -18029768.05116681   8.591352824588189e-05    0.002609678147496965
+       628      0.06279999999999999                       0        113375.628451993      -18029768.05116681   8.591352824588189e-05    0.002609678147496965
+       629                   0.0629                       0        113830.990373599      -18029768.05116706   6.524690826772983e-05    0.002263633593880003
+       629                   0.0629                       0        113830.990373599      -18029768.05116706   6.524690826772983e-05    0.002263633593880003
+       630                    0.063                       0        114283.707995931      -18029768.05116737   8.289308194055403e-05    0.002432642045907328
+       630                    0.063                       0        114283.707995931      -18029768.05116737   8.289308194055403e-05    0.002432642045907328
+       631                   0.0631                       0        114737.872905383      -18029768.05116758   6.621311468311517e-05    0.002096195443560316
+       631                   0.0631                       0        114737.872905383      -18029768.05116758   6.621311468311517e-05    0.002096195443560316
+       632      0.06320000000000001                       0        115192.066841752      -18029768.05116783    7.67832646017038e-05    0.002317975447992166
+       632      0.06320000000000001                       0        115192.066841752      -18029768.05116783    7.67832646017038e-05    0.002317975447992166
+       633                   0.0633                       0        115646.029993964      -18029768.05116808   6.273345834481243e-05    0.002040136981504092
+       633                   0.0633                       0        115646.029993964      -18029768.05116808   6.273345834481243e-05    0.002040136981504092
+       634                   0.0634                       0        116097.799849683      -18029768.05116833   9.218207397105162e-05    0.002295721970307078
+       634                   0.0634                       0        116097.799849683      -18029768.05116833   9.218207397105162e-05    0.002295721970307078
+       635                   0.0635                       0        116551.704876692      -18029768.05116856   6.996811260545632e-05    0.001954650767708429
+       635                   0.0635                       0        116551.704876692      -18029768.05116856   6.996811260545632e-05    0.001954650767708429
+       636                   0.0636                       0        117003.037497083       -18029768.0511688   5.924223799692874e-05    0.001968232865754994
+       636                   0.0636                       0        117003.037497083       -18029768.0511688   5.924223799692874e-05    0.001968232865754994
+       637      0.06370000000000001                       0         117455.37555449      -18029768.05116893   6.104363941266579e-05    0.001668480236022278
+       637      0.06370000000000001                       0         117455.37555449      -18029768.05116893   6.104363941266579e-05    0.001668480236022278
+       638                   0.0638                       0        117909.533098531       -18029768.0511691   8.811384826812839e-05     0.00204043765555141
+       638                   0.0638                       0        117909.533098531       -18029768.0511691   8.811384826812839e-05     0.00204043765555141
+       639                   0.0639                       0        118362.248161109      -18029768.05116925   4.920410808631481e-05    0.001668354936810984
+       639                   0.0639                       0        118362.248161109      -18029768.05116925   4.920410808631481e-05    0.001668354936810984
+       640                    0.064                       0        118816.099115748      -18029768.05116939   6.648561658449869e-05    0.001803771525812973
+       640                    0.064                       0        118816.099115748      -18029768.05116939   6.648561658449869e-05    0.001803771525812973
+       641                   0.0641                       0        119268.733600161      -18029768.05116954   5.823332304391745e-05     0.00152519345804372
+       641                   0.0641                       0        119268.733600161      -18029768.05116954   5.823332304391745e-05     0.00152519345804372
+       642      0.06420000000000001                       0        119720.957011526      -18029768.05116968   9.707075982169286e-05     0.00179972127234821
+       642      0.06420000000000001                       0        119720.957011526      -18029768.05116968   9.707075982169286e-05     0.00179972127234821
+       643                   0.0643                       0        120174.982418595      -18029768.05116981    7.01056141810567e-05    0.001537562333977866
+       643                   0.0643                       0        120174.982418595      -18029768.05116981    7.01056141810567e-05    0.001537562333977866
+       644                   0.0644                       0        120629.126631244      -18029768.05116998   8.149901563168655e-05    0.001852883531768207
+       644                   0.0644                       0        120629.126631244      -18029768.05116998   8.149901563168655e-05    0.001852883531768207
+       645                   0.0645                       0        121084.662749937      -18029768.05117012   6.626765119539932e-05    0.001688023924994766
+       645                   0.0645                       0        121084.662749937      -18029768.05117012   6.626765119539932e-05    0.001688023924994766
+       646                   0.0646                       0        121539.741427291      -18029768.05117029   0.0001146234671634402     0.00204479032908574
+       646                   0.0646                       0        121539.741427291      -18029768.05117029   0.0001146234671634402     0.00204479032908574
+       647      0.06470000000000001                       0        121993.268590061      -18029768.05117044   8.051425440535644e-05    0.001591150909228184
+       647      0.06470000000000001                       0        121993.268590061      -18029768.05117044   8.051425440535644e-05    0.001591150909228184
+       648                   0.0648                       0        122446.563321342      -18029768.05117064   0.0001801791546400633    0.002000144202357398
+       648                   0.0648                       0        122446.563321342      -18029768.05117064   0.0001801791546400633    0.002000144202357398
+       649                   0.0649                       0        122900.116179411      -18029768.05117078   5.332674895898752e-05    0.001720358349950319
+       649                   0.0649                       0        122900.116179411      -18029768.05117078   5.332674895898752e-05    0.001720358349950319
+       650                    0.065                       0         123352.36283487      -18029768.05117095   0.0001344044108193107    0.002041440684044098
+       650                    0.065                       0         123352.36283487      -18029768.05117095   0.0001344044108193107    0.002041440684044098
+       651      0.06510000000000001                       0        123806.148636468      -18029768.05117115   0.0001300584472425951    0.001789560411900121
+       651      0.06510000000000001                       0        123806.148636468      -18029768.05117115   0.0001300584472425951    0.001789560411900121
+       652      0.06520000000000001                       0        124258.536390516      -18029768.05117138   0.0001098660793790195     0.00226766664358731
+       652      0.06520000000000001                       0        124258.536390516      -18029768.05117138   0.0001098660793790195     0.00226766664358731
+       653                   0.0653                       0        124712.183010449      -18029768.05117158   5.587498092950172e-05    0.001969807304597005
+       653                   0.0653                       0        124712.183010449      -18029768.05117158   5.587498092950172e-05    0.001969807304597005
+       654                   0.0654                       0        125165.973010077      -18029768.05117179   0.0001765827941123312     0.00227546571589965
+       654                   0.0654                       0        125165.973010077      -18029768.05117179   0.0001765827941123312     0.00227546571589965
+       655                   0.0655                       0        125618.557315717      -18029768.05117203   7.386474003393331e-05    0.001787277460375479
+       655                   0.0655                       0        125618.557315717      -18029768.05117203   7.386474003393331e-05    0.001787277460375479
+       656      0.06560000000000001                       0        126072.199671422      -18029768.05117219   9.527888285178459e-05    0.002072142143165495
+       656      0.06560000000000001                       0        126072.199671422      -18029768.05117219   9.527888285178459e-05    0.002072142143165495
+       657      0.06570000000000001                       0        126525.271059959      -18029768.05117239   6.812740135927033e-05    0.001750457734362682
+       657      0.06570000000000001                       0        126525.271059959      -18029768.05117239   6.812740135927033e-05    0.001750457734362682
+       658                   0.0658                       0        126978.471454083      -18029768.05117255   0.0001076115358220981    0.002098963506187423
+       658                   0.0658                       0        126978.471454083      -18029768.05117255   0.0001076115358220981    0.002098963506187423
+       659                   0.0659                       0        127432.550522505      -18029768.05117275   5.732123275822149e-05    0.001657179770248607
+       659                   0.0659                       0        127432.550522505      -18029768.05117275   5.732123275822149e-05    0.001657179770248607
+       660                    0.066                       0        127887.592343609       -18029768.0511729   5.111108399979969e-05    0.001761902737328865
+       660                    0.066                       0        127887.592343609       -18029768.0511729   5.111108399979969e-05    0.001761902737328865
+       661      0.06610000000000001                       0        128341.987892654        -18029768.051173   4.811314027192148e-05    0.001414388419245789
+       661      0.06610000000000001                       0        128341.987892654        -18029768.051173   4.811314027192148e-05    0.001414388419245789
+       662      0.06620000000000001                       0        128795.905326063      -18029768.05117313    7.87719122251054e-05    0.001649656445741688
+       662      0.06620000000000001                       0        128795.905326063      -18029768.05117313    7.87719122251054e-05    0.001649656445741688
+       663                   0.0663                       0        129249.997019163      -18029768.05117328   4.044940015911214e-05    0.001290656467281889
+       663                   0.0663                       0        129249.997019163      -18029768.05117328   4.044940015911214e-05    0.001290656467281889
+       664                   0.0664                       0        129703.007865991      -18029768.05117332   5.334480683419004e-05    0.001462353796601328
+       664                   0.0664                       0        129703.007865991      -18029768.05117332   5.334480683419004e-05    0.001462353796601328
+       665                   0.0665                       0        130157.000927868      -18029768.05117345   4.372522438277158e-05    0.001244649827909778
+       665                   0.0665                       0        130157.000927868      -18029768.05117345   4.372522438277158e-05    0.001244649827909778
+       666      0.06660000000000001                       0        130610.375052258      -18029768.05117352   6.971021331253231e-05    0.001428376678722065
+       666      0.06660000000000001                       0        130610.375052258      -18029768.05117352   6.971021331253231e-05    0.001428376678722065
+       667      0.06670000000000001                       0        131063.458247827       -18029768.0511736   3.353800449223954e-05    0.001109193953646426
+       667      0.06670000000000001                       0        131063.458247827       -18029768.0511736   3.353800449223954e-05    0.001109193953646426
+       668                   0.0668                       0        131515.963698045      -18029768.05117369   3.898148083739117e-05    0.001206037234281814
+       668                   0.0668                       0        131515.963698045      -18029768.05117369   3.898148083739117e-05    0.001206037234281814
+       669                   0.0669                       0        132196.841624932      -18029768.05117372   4.147783955574594e-05   0.0009965191786182109
+       669                   0.0669                       0        132196.841624932      -18029768.05117372   4.147783955574594e-05   0.0009965191786182109
+Loop time of 132197 on 48 procs for 291 steps with 16746 atoms
+
+Loop time of 132197 on 48 procs for 291 steps with 16746 atoms
+
+516.3% CPU use with 4 MPI tasks x 12 OpenMP threads
+516.3% CPU use with 4 MPI tasks x 12 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = force tolerance
+  Energy initial, next-to-last, final = 
+     -18029768.0500349  -18029768.0511737  -18029768.0511737
+  Force two-norm initial, final = 0.039321359 0.00099651918
+  Force max component initial, final = 0.0014556218 4.147784e-05
+  Final line search alpha, max atom move = 1 4.147784e-05
+  Iterations, force evaluations = 291 582
+
+Minimization stats:
+  Stopping criterion = force tolerance
+  Energy initial, next-to-last, final = 
+     -18029768.0500349  -18029768.0511737  -18029768.0511737
+  Force two-norm initial, final = 0.039321359 0.00099651918
+  Force max component initial, final = 0.0014556218 4.147784e-05
+  Final line search alpha, max atom move = 1 4.147784e-05
+  Iterations, force evaluations = 291 582
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 1.3103e+05 | 1.314e+05  | 1.3202e+05 | 102.2 | 99.40
+Pair    | 1.3103e+05 | 1.314e+05  | 1.3202e+05 | 102.2 | 99.40
+Neigh   | 67.51      | 67.732     | 67.973     |   2.4 |  0.05
+Neigh   | 67.51      | 67.732     | 67.973     |   2.4 |  0.05
+Comm    | 110.26     | 724.18     | 1098.8     |1376.4 |  0.55
+Comm    | 110.26     | 724.18     | 1098.8     |1376.4 |  0.55
+Output  | 0.76488    | 0.76562    | 0.76778    |   0.1 |  0.00
+Output  | 0.76488    | 0.76562    | 0.76778    |   0.1 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.1776     |            |       |  0.00
+Other   |            | 0.1776     |            |       |  0.00
+
+Nlocal:         4186.5 ave        4230 max        4142 min
+Histogram: 2 0 0 0 0 0 0 0 0 2
+Nghost:        15485.8 ave       15523 max       15452 min
+Histogram: 2 0 0 0 0 0 0 0 0 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+FullNghs:  2.48818e+06 ave 2.51403e+06 max 2.46173e+06 min
+Histogram: 2 0 0 0 0 0 0 0 0 2
+
+Nlocal:         4186.5 ave        4230 max        4142 min
+Histogram: 2 0 0 0 0 0 0 0 0 2
+Nghost:        15485.8 ave       15523 max       15452 min
+Histogram: 2 0 0 0 0 0 0 0 0 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+FullNghs:  2.48818e+06 ave 2.51403e+06 max 2.46173e+06 min
+Histogram: 2 0 0 0 0 0 0 0 0 2
+
+
+Total # of neighbors = 9952706
+Ave neighs/atom = 594.33333
+Neighbor list builds = 583
+Dangerous builds = 0
+Total # of neighbors = 9952706
+Ave neighs/atom = 594.33333
+Neighbor list builds = 583
+Dangerous builds = 0
+write_data /home/theory/phrrpq/bilayer_relaxations/MoSe2_WSe2/P/30_aligned_1/MoSe2_WSe2_P_30_aligned_1.data
+System init for write_data ...
+System init for write_data ...
+Generated 0 of 3 mixed pair_coeff terms from geometric mixing rule
+Generated 0 of 3 mixed pair_coeff terms from geometric mixing rule
+
+Total wall time: 36:50:55
+Total wall time: 36:50:55

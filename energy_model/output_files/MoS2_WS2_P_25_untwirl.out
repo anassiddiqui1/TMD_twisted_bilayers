@@ -1,0 +1,166 @@
+OMP_THREADS: 12
+MPI: 1
+NTASKS-PER-NODE: 4
+CPUS_PER_TASK: 12
+LAMMPS (28 Mar 2023 - Development)
+  using 12 OpenMP thread(s) per MPI task
+  using 12 OpenMP thread(s) per MPI task
+Reading restart file ...
+  restart file = 28 Mar 2023, LAMMPS = 28 Mar 2023
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (140.84103 121.97191 30) with tilt (70.420516 0 0)
+WARNING: Triclinic box skew is large. LAMMPS will run inefficiently. (src/domain.cpp:220)
+  2 by 2 by 1 MPI processor grid
+  restoring pair style mace from restart
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:746)
+  11706 atoms
+  read_restart CPU = 0.098 seconds
+CUDA unavailable, setting device type to torch::kCPU.
+CUDA unavailable, setting device type to torch::kCPU.
+CUDA unavailable, setting device type to torch::kCPU.
+CUDA unavailable, setting device type to torch::kCPU.
+Loading MACE model from "/home/theory/phrrpq/bilayer_relaxations/MoWSSe_bi_radius_8_reduced_all_1_swa_800_run-123_swa.model-lammps.pt" ... finished.
+Loading MACE model from "/home/theory/phrrpq/bilayer_relaxations/MoWSSe_bi_radius_8_reduced_all_1_swa_800_run-123_swa.model-lammps.pt" ... finished.
+Loading MACE model from "/home/theory/phrrpq/bilayer_relaxations/MoWSSe_bi_radius_8_reduced_all_1_swa_800_run-123_swa.model-lammps.pt" ... finished.
+Loading MACE model from "/home/theory/phrrpq/bilayer_relaxations/MoWSSe_bi_radius_8_reduced_all_1_swa_800_run-123_swa.model-lammps.pt" ... finished.
+  - The torch_float_dtype is: Double
+  - The torch_float_dtype is: Double
+  - The torch_float_dtype is: Double
+  - The r_max is: 8.
+  - The r_max is: 8.
+  - The model has: 2 layers.
+  - The r_max is: 8.
+  - The model has: 2 layers.
+  - The model has: 2 layers.
+  - The torch_float_dtype is: Double
+  - The r_max is: 8.
+  - The model has: 2 layers.
+  - The model atomic numbers are: 16 34 42 74.
+  - The pair_coeff atomic numbers are: 42 16 74.
+  - The model atomic numbers are: 16 34 42 74.
+  - The pair_coeff atomic numbers are: 42 16 74.
+  - The model atomic numbers are: 16 34 42 74.
+  - The pair_coeff atomic numbers are: 42 16 74.
+  - The model atomic numbers are: 16 34 42 74.
+  - The pair_coeff atomic numbers are: 42 16 74.
+BEGIN LAMMPS STANDALONE MINIMIZATION; ii = 25; OMP = 12; MPI = 4
+minimize 0.0 1e-3 1000 100000
+Generated 0 of 3 mixed pair_coeff terms from geometric mixing rule
+Generated 0 of 3 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 18
+  ghost atom cutoff = 18
+  binsize = 9, bins = 24 14 4
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair mace, perpetual
+      attributes: full, newton on, ghost
+      pair build: full/bin/ghost
+      stencil: full/ghost/bin/3d
+      bin: standard
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 18
+  ghost atom cutoff = 18
+  binsize = 9, bins = 24 14 4
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair mace, perpetual
+      attributes: full, newton on, ghost
+      pair build: full/bin/ghost
+      stencil: full/ghost/bin/3d
+      bin: standard
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 445
+Per MPI rank memory allocation (min/avg/max) = 46.62 | 46.72 | 47.02 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 46.62 | 46.72 | 47.02 Mbytes
+   Step          Time           Temp           CPU           TotEng          Fmax          Fnorm     
+   Step          Time           Temp           CPU           TotEng          Fmax          Fnorm     
+       445                   0.0445                       0                       0      -10523837.71943456   7.359363707608313e-05     0.00163065812485161
+       445                   0.0445                       0                       0      -10523837.71943456   7.359363707608313e-05     0.00163065812485161
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+WARNING: Pair style restartinfo set but has no restart support (src/pair.cpp:754)
+       446      0.04460000000000001                       0           580.654989484       -10523837.7194346   4.363041542433307e-05   0.0009972620134006253
+       446      0.04460000000000001                       0           580.654989484       -10523837.7194346   4.363041542433307e-05   0.0009972620134006253
+Loop time of 580.655 on 48 procs for 1 steps with 11706 atoms
+
+Loop time of 580.655 on 48 procs for 1 steps with 11706 atoms
+
+514.9% CPU use with 4 MPI tasks x 12 OpenMP threads
+514.9% CPU use with 4 MPI tasks x 12 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = force tolerance
+  Energy initial, next-to-last, final = 
+     -10523837.7194346  -10523837.7194346  -10523837.7194346
+  Force two-norm initial, final = 0.0016306581 0.00099726201
+  Force max component initial, final = 7.3593637e-05 4.3630415e-05
+  Final line search alpha, max atom move = 1 4.3630415e-05
+  Iterations, force evaluations = 1 2
+
+Minimization stats:
+  Stopping criterion = force tolerance
+  Energy initial, next-to-last, final = 
+     -10523837.7194346  -10523837.7194346  -10523837.7194346
+  Force two-norm initial, final = 0.0016306581 0.00099726201
+  Force max component initial, final = 7.3593637e-05 4.3630415e-05
+  Final line search alpha, max atom move = 1 4.3630415e-05
+  Iterations, force evaluations = 1 2
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 561.45     | 570.41     | 580.36     |  29.6 | 98.24
+Pair    | 561.45     | 570.41     | 580.36     |  29.6 | 98.24
+Neigh   | 0.26855    | 0.27073    | 0.27307    |   0.3 |  0.05
+Neigh   | 0.26855    | 0.27073    | 0.27307    |   0.3 |  0.05
+Comm    | 0.0016438  | 9.9496     | 18.912     | 223.8 |  1.71
+Comm    | 0.0016438  | 9.9496     | 18.912     | 223.8 |  1.71
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.02049    |            |       |  0.00
+Other   |            | 0.02049    |            |       |  0.00
+
+Nlocal:         2926.5 ave        2946 max        2889 min
+Histogram: 1 0 0 0 0 0 0 1 1 1
+Nghost:          11946 ave       12103 max       11884 min
+Histogram: 3 0 0 0 0 0 0 0 0 1
+Neighs:              0 ave           0 max           0 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+FullNghs:  1.89632e+06 ave 1.91054e+06 max 1.87171e+06 min
+Histogram: 1 0 0 0 0 0 1 0 1 1
+
+Nlocal:         2926.5 ave        2946 max        2889 min
+Histogram: 1 0 0 0 0 0 0 1 1 1
+Nghost:          11946 ave       12103 max       11884 min
+Histogram: 3 0 0 0 0 0 0 0 0 1
+Neighs:              0 ave           0 max           0 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+FullNghs:  1.89632e+06 ave 1.91054e+06 max 1.87171e+06 min
+Histogram: 1 0 0 0 0 0 1 0 1 1
+
+
+Total # of neighbors = 7585270
+Ave neighs/atom = 647.98138
+Neighbor list builds = 3
+Dangerous builds = 0
+Total # of neighbors = 7585270
+Ave neighs/atom = 647.98138
+Neighbor list builds = 3
+Dangerous builds = 0
+write_data /home/theory/phrrpq/bilayer_relaxations/MoS2_WS2/P/25/MoS2_WS2_P_25.data
+System init for write_data ...
+System init for write_data ...
+Generated 0 of 3 mixed pair_coeff terms from geometric mixing rule
+Generated 0 of 3 mixed pair_coeff terms from geometric mixing rule
+
+Total wall time: 0:12:55
+Total wall time: 0:12:55
