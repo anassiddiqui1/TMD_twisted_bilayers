@@ -58,3 +58,16 @@ Also, generates the interlayer distance profiles with locations of node and doma
 Generates the images 'domain_ratio_schematic.png' used in Figure S11, and 'domain_ratio.png' used in Figure 6.
 - **`plot_twirl.ipynb`**: Jupyter Notebook for calculating distortion angle of domain wall between nodes in heterobilayers, and stores them in 'twirl_angles.pkl'.
 Generates the images 'twirl_schematic.png' used in Figure S10 and 'twirl_angles.png' used in Figure 5. 
+
+
+## 📝 Acknowledgements
+
+Some parts of this project adapt code from the following open-source work:
+
+- **Arnold, F., Ghasemifard, A., Kuc, A., Kunstmann, J., & Heine, T. (2023).**  
+  *Relaxation effects in twisted bilayer molybdenum disulfide: structure, stability, and electronic properties*  
+  [Zenodo, https://doi.org/10.5281/zenodo.7243735](https://doi.org/10.5281/zenodo.7243735)  
+  Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+
+In particular, we adapted the script `plot_interlayer_distance.py` for visualizing interlayer distance maps in twisted bilayer systems.  
+Modifications include adjustments for model outputs, data formatting, and structure handling.
