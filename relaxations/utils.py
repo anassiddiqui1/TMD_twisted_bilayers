@@ -1,3 +1,8 @@
+# This script is adapted from `plot_interlayer_distance.py` in:
+# Arnold et al. (2023), "Relaxation effects in twisted bilayer molybdenum disulfide", Zenodo record 7243735.
+# Used under CC BY 4.0 (https://doi.org/10.5281/zenodo.7243735)
+# Modifications: Adapted function extract_positions, different A_REF values in MakeGrid and formed a separate function get_grid_data which borrows heavily from the repository to make an extended grid.
+
 import math
 import numpy as np
 import matplotlib.pyplot as plt
